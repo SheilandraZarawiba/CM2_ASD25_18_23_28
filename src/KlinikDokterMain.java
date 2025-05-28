@@ -62,15 +62,16 @@ public class KlinikDokterMain {
                     System.out.println("Sisa antrian: " + daftarPasien.hitungAntrian());
                     break;
                 case 5:
-                    
+                    daftarTransaksi.tampilRiwayat();
                     break;
                 case 6:
-                    
+                    daftarTransaksi.sortNamaPasienDescending();
+                    daftarTransaksi.tampilRiwayat();
                     break;
                 default:
                     break;
             }
 
-        } while (pilihan !=6);
+        } while (pilihan !=7);
     }   
 }
