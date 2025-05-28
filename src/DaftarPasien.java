@@ -2,13 +2,13 @@ public class DaftarPasien {
     NodePasien head, tail;
     int size;
 
-    boolean isEmpty18() {
+    boolean isEmpty() {
         return (head == null);
     }
 
     public void addLast(Pasien pasien) {
         NodePasien newNode = new NodePasien(tail, pasien, null);
-         if (isEmpty18()) {
+         if (isEmpty()) {
             head = newNode;
             tail = newNode;
         } else {
@@ -18,14 +18,16 @@ public class DaftarPasien {
     }
 
     public void print() {
-        if (!isEmpty18()) {
-            NodePasien tmp = head;
-            while (tmp != null) {
-                System.out.print(tmp.data + "\t");
-                tmp = tmp.next;
-            }
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong.");
         } else {
-            System.out.println("Linked list kosong");
+            System.out.println("-- Antrian Pasien --");
+            NodePasien current = head;
+            System.out.printf("| %-10s | %-15s | %-15s |\n", "Nama", "NIK", "Keluhan");
+            while (current != null) {
+                System.out.printf("| %-10s | %-15s | %-15s |\n", current.data.nama, current.data.nik, current.data.keluhan);
+                current = current.next;
+            }
         }
     }
 }
