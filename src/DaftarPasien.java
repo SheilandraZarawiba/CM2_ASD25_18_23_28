@@ -15,6 +15,7 @@ public class DaftarPasien {
             tail.next = newNode;
             tail = newNode;
         }
+        size++;
     }
 
     public void print() {
@@ -49,12 +50,6 @@ public class DaftarPasien {
     }
 
      public int hitungAntrian() {
-        int size = 0;
-        NodePasien temp = head;
-        while (temp != null) {
-            size++;
-            temp = temp.next;
-        }
         return size;
     }
 }
