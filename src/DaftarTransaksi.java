@@ -15,8 +15,7 @@ public class DaftarTransaksi {
     }
 
     public void tampilRiwayat() {
-        System.out.println("-- Riwayat Transaksi --");
-        System.out.printf("%-10s %-15s %-6s %-8s\n", "Nama", "Nama Dokter", "Durasi", "Total");
+        System.out.printf("%-10s %-15s %-10s %-10s\n", "Nama", "Nama Dokter", "Durasi", "Total");
         NodeTransaksi current = head;
         while (current != null) {
             current.data.tampilkan();

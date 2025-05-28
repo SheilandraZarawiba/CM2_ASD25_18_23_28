@@ -20,7 +20,7 @@ public class DaftarDokter {
             }
             current = current.next;
         }
-         return null;
+        return null;
     }
 
     public void addLast(Dokter data) {

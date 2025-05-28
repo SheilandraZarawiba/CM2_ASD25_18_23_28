@@ -15,6 +15,6 @@ public class TransaksiLayanan {
     }
 
     public void tampilkan(){
-        System.out.printf("%-10s %-15s %-6d %-8d\n", pasien.nama, dokter.nama, durasiLayanan, biaya);
+        System.out.printf("%-10s %-15s %-10d %-10d\n", pasien.nama, dokter.nama, durasiLayanan, biaya);
     } 
 }

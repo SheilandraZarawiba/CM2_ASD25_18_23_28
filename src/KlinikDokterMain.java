@@ -61,11 +61,13 @@ public class KlinikDokterMain {
                 case 4:
                     System.out.println("Sisa antrian: " + daftarPasien.hitungAntrian());
                     break;
-                case 5:
+                case 5:        
+                    System.out.println("-- Riwayat Transaksi --");
                     daftarTransaksi.tampilRiwayat();
                     break;
                 case 6:
                     daftarTransaksi.sortNamaPasienDescending();
+                    System.out.println("-- Pengurutan Riwayat Transaksi --");
                     daftarTransaksi.tampilRiwayat();
                     break;
                 default:
