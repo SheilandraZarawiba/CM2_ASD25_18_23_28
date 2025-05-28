@@ -3,12 +3,8 @@ import java.util.Scanner;
 
 public class KlinikDokterMain {
     public static void main(String[] args) {
-<<<<<<< HEAD
-         Scanner sc =  new Scanner(System.in);
-=======
         DaftarPasien daftarPasien = new DaftarPasien(); 
         Scanner sc =  new Scanner(System.in);
->>>>>>> 09eb79b4e3fb79d33dbd680e27ff873450f2e474
         int pilihan;
 
         
