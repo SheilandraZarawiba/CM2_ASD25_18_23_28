@@ -31,7 +31,7 @@ public class DaftarPasien {
         }
     }
 
-    public void layaniPasien() {
+    public Pasien layaniPasien() {
         if (isEmpty()) {
             System.out.println("Antrian masih kosong");
         } else if (head == tail) {
@@ -39,7 +39,7 @@ public class DaftarPasien {
         } else {
             head = head.next;
         }
-        System.out.println("Pasien: " + head.data.nama + " dipanggil");
+        return head.data;
     }
 
      public int hitungAntrian() {

@@ -5,9 +5,5 @@ public class Dokter {
         this.idDokter = idDokter;
         this.nama = nama;
     }
-
-     public String getIdDokter() {
-    return idDokter;
-}
 }
 

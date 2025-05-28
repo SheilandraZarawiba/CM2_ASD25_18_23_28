@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class KlinikDokterMain {
     public static void main(String[] args) {
-        DaftarPasien daftarPasien = new DaftarPasien(); 
         Scanner sc =  new Scanner(System.in);
         int pilihan;
-
         
+        DaftarPasien daftarPasien = new DaftarPasien(); 
+        DaftarTransaksi daftarTransaksi = new DaftarTransaksi();
         DaftarDokter daftarDokter = new DaftarDokter();
 
         daftarDokter.addLast(new Dokter("dr01", "Wike Ratanca"));
@@ -45,13 +45,17 @@ public class KlinikDokterMain {
                     daftarPasien.print();
                     break;
                 case 3:
-                    daftarPasien.layaniPasien();
+                    Pasien pasienDilayani = daftarPasien.layaniPasien();
+                    System.out.println("Pasien: " + pasienDilayani.nama + " dipanggil");
                     daftarDokter.tampilDaftarDokter();
                     System.out.print("Input kode dokter: ");
                     String idDokter = sc.nextLine();
                     Dokter dokterDipilih = daftarDokter.searchDokterId(idDokter);
                     System.out.print("Input durasi layanan(jam) : ");
                     jam = sc.nextInt();
+                    TransaksiLayanan transaksi = new TransaksiLayanan(pasienDilayani, dokterDipilih, jam);
+                    daftarTransaksi.tambah(transaksi);
+                    System.out.println("Pasien telah dilayani, transaksi berhasil dicatat");
                     break;
                 case 4:
                     System.out.println("Sisa antrian: " + daftarPasien.hitungAntrian());

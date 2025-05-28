@@ -15,7 +15,7 @@ public class DaftarDokter {
     public Dokter searchDokterId(String id) {
         NodeDokter current = head;
         while (current != null) {
-            if (current.data.getIdDokter().equalsIgnoreCase(id)) {
+            if (current.data.idDokter.equalsIgnoreCase(id)) {
                 return current.data;
             }
             current = current.next;
