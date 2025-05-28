@@ -53,15 +53,6 @@ public class DaftarPasien {
         }
     }
 
-    // public void removeLast() {
-    //     if (isEmpty()) {
-    //         System.out.println("Antrian masih kosong");
-    //     } else if () {
-           
-    //         return;
-    //     }
-    // }
-
      public int hitungAntrian() {
         return size;
     }
