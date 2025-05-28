@@ -6,6 +6,14 @@ public class KlinikDokterMain {
         Scanner sc =  new Scanner(System.in);
         int pilihan;
 
+        
+        DaftarDokter daftarDokter = new DaftarDokter();
+
+        daftarDokter.addLast(new Dokter("dr01", "Wike Ratanca"));
+        daftarDokter.addLast(new Dokter("dr02", "Santi Runica"));
+        daftarDokter.addLast(new Dokter("dr03", "Waskito"));
+        daftarDokter.addLast(new Dokter("dr04", "Slamet Sugito"));
+
         do {
             System.out.println("Sistem Antrian Klinik");
             System.out.println("1. Tambah Pasien ke Antrian");
