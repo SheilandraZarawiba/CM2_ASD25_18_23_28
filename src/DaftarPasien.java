@@ -31,15 +31,21 @@ public class DaftarPasien {
         }
     }
 
-    public Pasien layaniPasien() {
+    public Pasien getFirst() {
         if (isEmpty()) {
-            System.out.println("Antrian masih kosong");
-        } else if (head == tail) {
-            head = tail = null;
-        } else {
-            head = head.next;
+            System.out.println("Antrian kosong");
         }
         return head.data;
+    }
+
+    public void layaniPasien() {
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong");
+        } else {
+            head = head.next;
+            head.prev = null;
+            size--;
+        }
     }
 
      public int hitungAntrian() {

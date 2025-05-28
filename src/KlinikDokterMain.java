@@ -45,8 +45,9 @@ public class KlinikDokterMain {
                     daftarPasien.print();
                     break;
                 case 3:
-                    Pasien pasienDilayani = daftarPasien.layaniPasien();
+                    Pasien pasienDilayani = daftarPasien.getFirst();
                     System.out.println("Pasien: " + pasienDilayani.nama + " dipanggil");
+                    daftarPasien.layaniPasien();
                     daftarDokter.tampilDaftarDokter();
                     System.out.print("Input kode dokter: ");
                     String idDokter = sc.nextLine();
