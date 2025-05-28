@@ -42,12 +42,24 @@ public class DaftarPasien {
     public void layaniPasien() {
         if (isEmpty()) {
             System.out.println("Antrian masih kosong");
+        } else if (head.next == null) {
+            head = null;
+            size--;
         } else {
             head = head.next;
             head.prev = null;
             size--;
         }
     }
+
+    // public void removeLast() {
+    //     if (isEmpty()) {
+    //         System.out.println("Antrian masih kosong");
+    //     } else if () {
+           
+    //         return;
+    //     }
+    // }
 
      public int hitungAntrian() {
         return size;
