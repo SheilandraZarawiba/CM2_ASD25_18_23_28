@@ -30,4 +30,25 @@ public class DaftarPasien {
             }
         }
     }
+
+    public void layaniPasien() {
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong");
+        } else if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+        }
+        System.out.println("Pasien: " + head.data.nama + " dipanggil");
+    }
+
+     public int hitungAntrian() {
+        int size = 0;
+        NodePasien temp = head;
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 }

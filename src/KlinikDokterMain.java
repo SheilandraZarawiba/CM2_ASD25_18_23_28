@@ -3,12 +3,8 @@ import java.util.Scanner;
 
 public class KlinikDokterMain {
     public static void main(String[] args) {
-<<<<<<< HEAD
-         Scanner sc =  new Scanner(System.in);
-=======
         DaftarPasien daftarPasien = new DaftarPasien(); 
         Scanner sc =  new Scanner(System.in);
->>>>>>> 09eb79b4e3fb79d33dbd680e27ff873450f2e474
         int pilihan;
 
         
@@ -49,12 +45,16 @@ public class KlinikDokterMain {
                     daftarPasien.print();
                     break;
                 case 3:
-                    System.out.println("Pilih Dokter: ");
+                    daftarPasien.layaniPasien();
+                    daftarDokter.tampilDaftarDokter();
+                    System.out.print("Input kode dokter: ");
+                    String idDokter = sc.nextLine();
+                    Dokter dokterDipilih = daftarDokter.searchDokterId(idDokter);
                     System.out.print("Input durasi layanan(jam) : ");
                     jam = sc.nextInt();
                     break;
                 case 4:
-                    
+                    System.out.println("Sisa antrian: " + daftarPasien.hitungAntrian());
                     break;
                 case 5:
                     
