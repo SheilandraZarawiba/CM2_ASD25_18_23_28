@@ -16,6 +16,7 @@ public class DaftarPasien {
             tail = newNode;
         }
         size++;
+        System.out.println("Pasien masuk ke dalam antrian");
     }
 
     public void print() {
